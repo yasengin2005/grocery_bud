@@ -265,24 +265,29 @@ ul {
   box-shadow: var(--shadow-1);
   transition: var(--transition);
 }
+
 .section-center:hover {
   box-shadow: var(--shadow-3);
 }
 
 form h4 {
-  text-align: center;
+  text-align:center;
   margin-bottom: 1.5rem;
 }
+
 .form-control {
   display: grid;
   grid-template-columns: 1fr 100px;
+
 }
+
 .form-input {
   border-radius: 0;
   border-top-left-radius: var(--borderRadius);
   border-bottom-left-radius: var(--borderRadius);
 }
-.form-control .btn {
+
+.form-contol .btn {
   border-radius: 0;
   border-top-right-radius: var(--borderRadius);
   border-bottom-right-radius: var(--borderRadius);
@@ -296,10 +301,10 @@ form h4 {
 
 .single-item {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  column-gap: 1rem;
+  grid-template-columns: auto 1fr auto;column-gap: 1rem;
   align-items: center;
 }
+
 .single-item p {
   letter-spacing: var(--letterSpacing);
 }
@@ -313,7 +318,25 @@ form h4 {
 .Toastify__toast {
   text-transform: capitalize;
 }
-/* App.jsx: section: 'section-center' */
-/* Form div: 'form-control' input: 'form-input' */
-/* Items: div: 'items' */
-/* SingleItem div: 'single-item'  button:'btn remove-btn' */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,14 +5,14 @@ const Form = ({ addItem }) => {
   const [newItemName, setNewItemName] = useState("");
 
   const submitHandler = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!newItemName) {
-      toast.error("Enter a value please!I")
+      toast.error("Enter a value please");
       return;
     }
-    addItem(newItemName)
-    setNewItemName("")
-  }
+    addItem(newItemName);
+    setNewItemName("");
+  };
 
   return (
     <form onSubmit={submitHandler}>

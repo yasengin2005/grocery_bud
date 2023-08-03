@@ -57,7 +57,7 @@ const App = () => {
 
   return (
     <section className="section-center">
-      <ToastContainer position="bottom-right" autoClose={1000} />
+      <ToastContainer position="bottom-left" autoClose={1200} />
       <Form addItem={addItem} />
       <Items items={items} removeItem={removeItem} editItem={editItem} />
     </section>
