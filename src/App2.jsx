@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Form from "./Form";
-import Items from "./Items";
 import { nanoid } from "nanoid";
+import Items from "./Items";
 import { ToastContainer, toast } from "react-toastify";
 
 const getLocalStorage = () => {
@@ -18,7 +18,7 @@ const setLocalStorage = (items) => {
   localStorage.setItem("list", JSON.stringify(items));
 };
 
-const defaultList = JSON.parse(localStorage.getItem("list"), "[]");
+const defaultList = JSON.parse(localStorage.getItem("list") || "[]");
 
 const App = () => {
   const [items, setItems] = useState(defaultList);
@@ -32,14 +32,14 @@ const App = () => {
     const newItems = [...items, newItem];
     setItems(newItems);
     setLocalStorage(newItems);
-    toast.success("Added");
+    toast.success("item added to the list");
   };
 
   const removeItem = (itemId) => {
     const newItems = items.filter((item) => item.id !== itemId);
     setItems(newItems);
     setLocalStorage(newItems);
-    toast.success("Removed");
+    toast.success("item removed from the list");
   };
 
   const editItem = (itemId) => {
@@ -52,14 +52,18 @@ const App = () => {
     });
     setItems(newItems);
     setLocalStorage(newItems);
-    toast.success("Edited");
+    toast.success('item edited')
   };
 
   return (
     <section className="section-center">
       <ToastContainer position="bottom-right" autoClose={1000} />
       <Form addItem={addItem} />
-      <Items items={items} removeItem={removeItem} editItem={editItem} />
+      <Items
+        items={items}
+        removeItem={removeItem}
+        editItem={editItem}
+      />
     </section>
   );
 };

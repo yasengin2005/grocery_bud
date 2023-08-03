@@ -1,4 +1,5 @@
 const SingleItem = ({ item, removeItem, editItem }) => {
+
   return (
     <div className="single-item">
       <input
@@ -26,3 +27,4 @@ const SingleItem = ({ item, removeItem, editItem }) => {
 };
 
 export default SingleItem;
+

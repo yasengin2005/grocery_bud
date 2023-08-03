@@ -293,6 +293,7 @@ form h4 {
   display: grid;
   row-gap: 1rem;
 }
+
 .single-item {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -312,3 +313,7 @@ form h4 {
 .Toastify__toast {
   text-transform: capitalize;
 }
+/* App.jsx: section: 'section-center' */
+/* Form div: 'form-control' input: 'form-input' */
+/* Items: div: 'items' */
+/* SingleItem div: 'single-item'  button:'btn remove-btn' */
